@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+import AccountBalance from './Components/AccountBalance';
+
 function App() {
+  const accounts = {
+    balance: 1500,
+    savingBalance: 1328,
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app container">
+      <div className="section">
+        <h1 className="has-text-centered title is-1">Welcome in the personal finance app!</h1>
+        <AccountBalance accounts={accounts} />
+      </div>
     </div>
   );
 }
